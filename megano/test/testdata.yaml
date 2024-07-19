@@ -1,0 +1,15 @@
+address: http://127.0.0.1:8000/
+sleep_time: 1
+browser: chrome
+wait: 3
+true_username: jeksi
+true_email: 123@mail.ru
+true_password: TopGear2509
+true_number: +7 (999) 999-99-91
+invalid_input1: 312sdase sadjASSE>/ze!Ывйцу"@  #невалидный ввод, состоящий из различных символов, букв, цифр и знаков.
+invalid_email1: 312sdase sadjASSE>/ze!Ывйцу"@@mail.ru
+invalid_number: +7(999)999-99-91
+unknown_username: /@mail.ru
+unknown_password: 12qwerty./
+invalid_input2: d
+invalid_email2: d@mail.ru
