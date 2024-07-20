@@ -10,7 +10,7 @@ from module import Site
 with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)
 megano = Site(testdata["address"])
-name = testdata["invalid_input1"]
+name = testdata["true_username"]
 password = testdata["true_password"]
 phone_number = testdata["true_number"]
 

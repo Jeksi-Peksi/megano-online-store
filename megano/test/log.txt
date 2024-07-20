@@ -1,6 +1,5 @@
-2024-07-20 00:37:19 INFO ====== WebDriver manager ======
-2024-07-20 00:37:19 INFO Get LATEST chromedriver version for google-chrome
-2024-07-20 00:37:19 INFO Get LATEST chromedriver version for google-chrome
-2024-07-20 00:37:19 INFO Driver [C:\Users\JeksiPeksi\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
-2024-07-20 00:37:21 INFO Test search
-2024-07-20 00:37:25 ERROR Код ошибки 403
+2024-07-20 04:54:19 INFO ====== WebDriver manager ======
+2024-07-20 04:54:20 INFO Get LATEST chromedriver version for google-chrome
+2024-07-20 04:54:21 INFO Get LATEST chromedriver version for google-chrome
+2024-07-20 04:54:21 INFO Driver [C:\Users\JeksiPeksi\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2024-07-20 04:54:23 INFO Test search
