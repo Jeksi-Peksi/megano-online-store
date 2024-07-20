@@ -38,6 +38,7 @@ def test_registration6(btn_default_registration, field_name, field_email, field_
     text = similar_name.text
     short_password = megano.find_element("xpath", text_short_pass)
     text_pass = short_password.text
+    logging.info("*Введённый пароль слишком похож на Имя пользователя.")
     megano.close()
     assert (text == "*Введённый пароль слишком похож на Имя пользователя." and text_pass == "*Введённый пароль слишком короткий. Он должен содержать как минимум 8 символов.")
 

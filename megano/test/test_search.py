@@ -8,8 +8,6 @@ with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)
 megano = Site(testdata["address"])
 
-logging.basicConfig(filename="mylog.log")
-
 def test_search(btn_search, btn_megano_emage, text_navigation):
     logging.info("Test search")
     # Просто кликаем на логотип "Megano", который также является кнопкой загрузки главной страницы.

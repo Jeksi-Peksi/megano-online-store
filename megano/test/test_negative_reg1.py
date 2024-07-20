@@ -12,8 +12,7 @@ with open("./testdata.yaml") as f:
     email = testdata["true_email"]
     password = testdata["true_password"]
     phone_number = testdata["invalid_number"]
-def test_registration1(btn_default_registration, field_name, field_email, field_password,
-                       btn_registration1, field_phone_number, btn_save, text_successful_save):
+def test_registration1(btn_default_registration, field_name, field_email, field_password, btn_registration1, field_phone_number, btn_save, text_successful_save):
     logging.info("Test negative registration1 (All fields are empty)")
     click_registration = megano.find_element("xpath", btn_default_registration)
     click_registration.click()

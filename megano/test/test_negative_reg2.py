@@ -12,8 +12,7 @@ name = testdata["invalid_input1"]
 password = testdata["true_password"]
 phone_number = testdata["true_number"]
 
-def test_registration2(btn_default_registration, field_name, field_email, field_password,
-                       btn_registration1, field_phone_number, btn_save, text_successful_save):
+def test_registration2(btn_default_registration, field_name, field_email, field_password, btn_registration1, field_phone_number, btn_save, text_successful_save):
     logging.info("Test negative registration2 (Name)")
     click_registration = megano.find_element("xpath", btn_default_registration)
     click_registration.click()
@@ -33,6 +32,7 @@ def test_registration2(btn_default_registration, field_name, field_email, field_
     click_registration1 = megano.find_element("xpath", btn_registration1)
     click_registration1.click()
     time.sleep(2)
+    logging.info("Click registration button")
     input_field_phone_number = megano.find_element("css", field_phone_number)
     input_field_phone_number.clear()
     input_field_phone_number.send_keys("+7 (999) 999-99-92")
@@ -42,6 +42,7 @@ def test_registration2(btn_default_registration, field_name, field_email, field_
     time.sleep(2)
     profile_save = megano.find_element("css", text_successful_save)
     text = profile_save.text
+    logging.info("Профиль успешно сохранен")
     megano.close()
     assert text == "Профиль успешно сохранен"
 

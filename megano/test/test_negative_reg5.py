@@ -10,8 +10,7 @@ with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)
 megano = Site(testdata["address"])
 
-def test_registration5(btn_default_registration, field_name, field_email, field_password,
-                       btn_registration1, text_required_field2):
+def test_registration5(btn_default_registration, field_name, field_email, field_password, btn_registration1, text_required_field2):
     logging.info("Test negative registration5 (password = spaces)")
     click_registration = megano.find_element("xpath", btn_default_registration)
     click_registration.click()
@@ -31,6 +30,7 @@ def test_registration5(btn_default_registration, field_name, field_email, field_
     # Пароль из десяти пробелов
     input_field_password.send_keys("          ")
     time.sleep(1)
+    logging.info("The password consists of only spaces")
     click_registration1 = megano.find_element("xpath", btn_registration1)
     click_registration1.click()
     time.sleep(1)
@@ -38,9 +38,8 @@ def test_registration5(btn_default_registration, field_name, field_email, field_
     text = required_field2.text
     assert text == "*Обязательное поле."
 
-def test_registration5_1(field_name, field_email, field_password, btn_registration1,
-                       text_required_field1):
-    logging.info("Test negative registration5_1 (Name = spaces)")
+def test_registration5_1(field_name, field_email, field_password, btn_registration1, text_required_field1):
+    logging.info("Test negative registration5_1 (The name consists of only spaces.)")
     # Имя невалидное (состоит из 10-ти пробелов)
     input_field_name = megano.find_element("css", field_name)
     input_field_name.clear()
@@ -61,6 +60,7 @@ def test_registration5_1(field_name, field_email, field_password, btn_registrati
     time.sleep(1)
     required_field1 = megano.find_element("xpath", text_required_field1)
     text = required_field1.text
+    logging.info("увидели *Обязательное поле")
     megano.close()
     assert text == "*Обязательное поле."
 

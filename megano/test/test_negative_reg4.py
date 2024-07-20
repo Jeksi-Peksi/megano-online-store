@@ -14,8 +14,7 @@ name = testdata["true_username"]
 password = testdata["true_password"]
 phone_number = testdata["true_number"]
 
-def test_registration4(btn_default_registration, field_name, field_email, field_password,
-                       btn_registration1, field_phone_number, btn_save, text_successful_save):
+def test_registration4(btn_default_registration, field_name, field_email, field_password, btn_registration1, field_phone_number, btn_save, text_successful_save):
     logging.info("Test negative registration4 (E-mail)")
     click_registration = megano.find_element("xpath", btn_default_registration)
     click_registration.click()
@@ -33,6 +32,7 @@ def test_registration4(btn_default_registration, field_name, field_email, field_
     input_field_password.clear()
     input_field_password.send_keys(password)
     time.sleep(2)
+    logging.info("Registration with invalid e-mail")
     click_registration1 = megano.find_element("xpath", btn_registration1)
     click_registration1.click()
     time.sleep(2)
@@ -45,6 +45,7 @@ def test_registration4(btn_default_registration, field_name, field_email, field_
     time.sleep(2)
     profile_save = megano.find_element("css", text_successful_save)
     text = profile_save.text
+    logging.info("Профиль успешно сохранен")
     megano.close()
     assert text == "Профиль успешно сохранен"
 
